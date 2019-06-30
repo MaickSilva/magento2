@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:hello:Module/Magento_Hello:etc/widget.xsd">
+   
+   <widget class="" id="hellohomepage_widget">
+      <label>Hello Homepage</label>
+      <description>Hello Homepage</description>
+
+    <parameters>
+      <parameter name="title" xsi:type="text" required="false" visible="true">
+        <label translate="true">Title</label>
+      </parameter>
+      <parameter name="title" xsi:type="text" required="false" visible="true">
+        <label translate="true">Description</label>
+        <item name="wysiwyg" xsi:type="boolean">true</item>
+      </parameter>
+    
+    </parameters>
+   </widget>
+</widgets>  
