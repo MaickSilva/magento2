@@ -149,7 +149,7 @@ $ sudo bin/magento setup:upgrade && bin/magento cache:clean && bin/magento cache
 ![alt text](screenshots/AdminHomePage.png "Admin Pagina Home page")
  
 
-#Não utilizando o banco de dados disponibilizado acima você pode fazer a instalação normalmente via CLI.
+# Não utilizando o banco de dados disponibilizado acima você pode fazer a instalação normalmente via CLI.
 
 Muita atenção abaixo, você precisa inserir com muita atenção as informações para que seja feito a conexão sem problemas.
 os principais campos para observação são: `--base-url`,`--db-host`,`--db-name`,`--db-user` e `--db-password`
