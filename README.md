@@ -132,25 +132,34 @@ Depois de alterar você precisa limpar o cache
 $ sudo bin/magento setup:upgrade && bin/magento cache:clean && bin/magento cache:flush
 ```
 
-## Se você seguiu todos os passos e está utilizando o banco que disponibilizei você deve estar vendo algo parecido com isso:
+### Se você seguiu todos os passos e está utilizando o banco que disponibilizei você deve estar vendo algo parecido com isso:
  
 ![alt text](screenshots/FrontendHomepage.png "Página inicial com blocos adicionais")
 
 
 
-## Dentro do ADMIN indo até Content > Blocks, você irá encontrar algo como isso:
+### Dentro do ADMIN indo até Content > Blocks, você irá encontrar algo como isso:
 
 ![alt text](screenshots/AdminBlock.png "Tela de Blocos no Admin")
  
  
  
  
-## Indo até Content > Pages > Home Page e indo em editar você irá ver algo assim:
+### Indo até Content > Pages > Home Page e indo em editar você irá ver algo assim:
 
 ![alt text](screenshots/AdminHomePage.png "Admin Pagina Home page")
+
+## (Vídeo) Instalação completa seguindo estes passos do readme.md
+
+Clique na imagem para assistir o vídeo.
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=VAtoP3KY6LA" target="_blank">
+ <img src="http://img.youtube.com/vi/VAtoP3KY6LA/0.jpg" 
+alt="Instalando magento 2 via composer (Seguindo o readme do repositório)
+"  height="300" border="10" /></a>
  
 
-# Não utilizando o banco de dados disponibilizado acima você pode fazer a instalação normalmente via CLI.
+## Não utilizando o banco de dados disponibilizado acima você pode fazer a instalação normalmente via CLI.
 
 Muita atenção abaixo, você precisa inserir com muita atenção as informações para que seja feito a conexão sem problemas.
 os principais campos para observação são: `--base-url`,`--db-host`,`--db-name`,`--db-user` e `--db-password`
@@ -173,24 +182,20 @@ $ sudo bin/magento setup:install \
 --use-rewrites=1 
 ```
  
-## Após a instalação você deve ver algo assim: 
+### Após a instalação você deve ver algo assim: 
 
 ![alt text](screenshots/magentodefault.png "Página inicial padrão do tema")
  
  
 ## Links de ajuda
-### Instalação completa seguindo estes passos do readme 
 
-Clique na imagem para assistir o vídeo.
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=VAtoP3KY6LA" target="_blank">
- <img src="http://img.youtube.com/vi/VAtoP3KY6LA/0.jpg" 
-alt="Instalando magento 2 via composer (Seguindo o readme do repositório)
-"  height="300" border="10" /></a>
+### (Vídeo) Instalação via composer seguindo a documentação do magento.
 
-### Instalação via composer seguindo a documentação do magento (Vídeo feito por mim)
+Clique para assistir
+
 [Instalação via composer](https://streamable.com/mhwrf).
  
-### Documentação do Magento 
+### Documentação do Magento.
 [Install Magento using Composer](https://devdocs.magento.com/guides/v2.3/install-gde/composer.html).
 
