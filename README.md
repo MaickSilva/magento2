@@ -61,16 +61,21 @@ $ sudo bin/magento setup:install \
 --use-rewrites=1 
 ```
  
+## Após este último passo, se você seguiu todos os passos e está utilizando o banco que disponibilizei você deve estar vendo algo parecido com isso:
  
-## Após esse último passo seu magento deve está instalado, pronto e funcional
+![alt text](screenshots/FrontendHomepage.png "Página inicial com blocos adicionais")
+
+## Dentro do ADMIN indo até Content > Blocks, você irá encontrar algo como isso:
+
+![alt text](screenshots/AdminBlock.png "Tela de Blocos no Admin")
  
-você deve está vendo algo parecido com isso: [Magento Homepage](https://imgur.com/LBT6mC0).
+ 
+## Indo até Content > Pages > Home Page e indo em editar você irá ver algo assim:
+
+![alt text](screenshots/AdminHomePage.png "Admin Pagina Home page")
  
  
 ## Links de ajuda
 Vídeo feito por mim [Instalação via composer](https://streamable.com/mhwrf).
  
-[Install Magento using Composer](https://devdocs.magento.com/guides/v2.3/install-gde/composer.html).
- 
- 
-
+Documentação do Magento [Install Magento using Composer](https://devdocs.magento.com/guides/v2.3/install-gde/composer.html).
