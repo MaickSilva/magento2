@@ -179,7 +179,18 @@ $ sudo bin/magento setup:install \
  
  
 ## Links de ajuda
-Vídeo feito por mim [Instalação via composer](https://streamable.com/mhwrf).
+### Instalação completa seguindo estes passos do readme 
+
+Clique na imagem para assistir o vídeo.
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=VAtoP3KY6LA" target="_blank">
+ <img src="http://img.youtube.com/vi/VAtoP3KY6LA/0.jpg" 
+alt="Instalando magento 2 via composer (Seguindo o readme do repositório)
+"  height="300" border="10" /></a>
+
+### Instalação via composer seguindo a documentação do magento (Vídeo feito por mim)
+[Instalação via composer](https://streamable.com/mhwrf).
  
-Documentação do Magento [Install Magento using Composer](https://devdocs.magento.com/guides/v2.3/install-gde/composer.html).
+### Documentação do Magento 
+[Install Magento using Composer](https://devdocs.magento.com/guides/v2.3/install-gde/composer.html).
 
