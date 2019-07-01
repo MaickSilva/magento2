@@ -65,14 +65,25 @@ $ sudo bin/magento setup:install \
  
 ![alt text](screenshots/FrontendHomepage.png "Página inicial com blocos adicionais")
 
+
+
 ## Dentro do ADMIN indo até Content > Blocks, você irá encontrar algo como isso:
 
 ![alt text](screenshots/AdminBlock.png "Tela de Blocos no Admin")
  
  
+ 
+ 
 ## Indo até Content > Pages > Home Page e indo em editar você irá ver algo assim:
 
 ![alt text](screenshots/AdminHomePage.png "Admin Pagina Home page")
+ 
+ 
+ 
+ 
+## Se você não usou meu sql você deve ver algo assim: 
+
+![alt text](screenshots/magentodefault.png "Página inicial padrão do tema")
  
  
 ## Links de ajuda
