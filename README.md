@@ -37,9 +37,120 @@ Em seguida você pode entrar na url que você definiu no seu servidor para acess
  
 ### Banco de dados via CLI
  
-Você pode criar um banco de dados e um novo usuário para fazer a instalação, no caso estou disponibilizando um sql para que seu banco fique igual ao meu contento meu bloco personalizado
-[Minha database atual](https://drive.google.com/file/d/113MtbwufKYHhJAxSaYR3wcHwja7Er7CT/view?usp=sharing).
+Você pode criar um banco de dados e um novo usuário para fazer a instalação, no caso estou disponibilizando um sql para que seu banco possa ficar igual ao meu contento meu bloco personalizado
+[Minha database atual](https://drive.google.com/file/d/1RxhM2JOzwfFDcXMsXE92aGChEagNAoIb/view).
+
+Obs: vou disponibilizar um arquivo no qual você deve criar dentro do diretório ```<directory>app/etc/```
+
+Você irá criar o arquivo chamado ```env.php``` e inserir o código abaixo alterando os parâmetros para os seus
+
+Obs: pode ser que você precise alterar as permissões para criar o arquivo
+
+```
+<?php
+return [
+    'backend' => [
+        'frontName' => 'admin'
+    ],
+    'crypt' => [
+        'key' => 'f92d9148a10b89d99f97a60e5e344d4d'
+    ],
+    'db' => [
+        'table_prefix' => '',
+        'connection' => [
+            'default' => [
+                'host' => 'localhost',
+                'dbname' => 'magento',
+                'username' => 'user',
+                'password' => 'magento,
+                'model' => 'mysql4',
+                'engine' => 'innodb',
+                'initStatements' => 'SET NAMES utf8;',
+                'active' => '1'
+            
+        
+    ],
+    'resource' => [
+        'default_setup' => [
+            'connection' => 'default'
+        
+    ],
+    'x-frame-options' => 'SAMEORIGIN',
+    'MAGE_MODE' => 'default',
+    'session' => [
+        'save' => 'files'
+    ],
+    'cache' => [
+        'frontend' => [
+            'default' => [
+                'id_prefix' => '4cf_'
+            ],
+            'page_cache' => [
+                'id_prefix' => '4cf_'
+            
+        
+    ],
+    'lock' => [
+        'provider' => 'db',
+        'config' => [
+            'prefix' => NULL
+        
+    ],
+    'cache_types' => [
+        'config' => 1,
+        'layout' => 1,
+        'block_html' => 1,
+        'collections' => 1,
+        'reflection' => 1,
+        'db_ddl' => 1,
+        'compiled_config' => 1,
+        'eav' => 1,
+        'customer_notification' => 1,
+        'config_integration' => 1,
+        'config_integration_api' => 1,
+        'full_page' => 1,
+        'config_webservice' => 1,
+        'translate' => 1,
+        'vertex' => 1
+    ],
+    'install' => [
+        'date' => 'Sun, 30 Jun 2019 09:13:03 +0000'
+    
+];
+
+```
+
+Após isso você precisará alterar a URL dentro do seu banco de dados, procure pela tabela core_config_data 
+```
+core_config_data -> web/unsecure/base_url -> Alterar o campo para sua URL 
+```
+[Exemplo do que alterar](https://magento.stackexchange.com/questions/39752/how-do-i-fix-my-base-urls-so-i-can-access-my-magento-site)
+
+Depois de alterar você precisa limpar o cache
+```
+$ sudo bin/magento setup:upgrade && bin/magento cache:clean && bin/magento cache:flush
+```
+
+## Se você seguiu todos os passos e está utilizando o banco que disponibilizei você deve estar vendo algo parecido com isso:
  
+![alt text](screenshots/FrontendHomepage.png "Página inicial com blocos adicionais")
+
+
+
+## Dentro do ADMIN indo até Content > Blocks, você irá encontrar algo como isso:
+
+![alt text](screenshots/AdminBlock.png "Tela de Blocos no Admin")
+ 
+ 
+ 
+ 
+## Indo até Content > Pages > Home Page e indo em editar você irá ver algo assim:
+
+![alt text](screenshots/AdminHomePage.png "Admin Pagina Home page")
+ 
+
+#Não utilizando o banco de dados disponibilizado acima você pode fazer a instalação normalmente via CLI.
+
 Muita atenção abaixo, você precisa inserir com muita atenção as informações para que seja feito a conexão sem problemas.
 os principais campos para observação são: `--base-url`,`--db-host`,`--db-name`,`--db-user` e `--db-password`
 ```
@@ -61,27 +172,7 @@ $ sudo bin/magento setup:install \
 --use-rewrites=1 
 ```
  
-## Após este último passo, se você seguiu todos os passos e está utilizando o banco que disponibilizei você deve estar vendo algo parecido com isso:
- 
-![alt text](screenshots/FrontendHomepage.png "Página inicial com blocos adicionais")
-
-
-
-## Dentro do ADMIN indo até Content > Blocks, você irá encontrar algo como isso:
-
-![alt text](screenshots/AdminBlock.png "Tela de Blocos no Admin")
- 
- 
- 
- 
-## Indo até Content > Pages > Home Page e indo em editar você irá ver algo assim:
-
-![alt text](screenshots/AdminHomePage.png "Admin Pagina Home page")
- 
- 
- 
- 
-## Se você não usou meu sql você deve ver algo assim: 
+## Após a instalação você deve ver algo assim: 
 
 ![alt text](screenshots/magentodefault.png "Página inicial padrão do tema")
  
@@ -90,3 +181,4 @@ $ sudo bin/magento setup:install \
 Vídeo feito por mim [Instalação via composer](https://streamable.com/mhwrf).
  
 Documentação do Magento [Install Magento using Composer](https://devdocs.magento.com/guides/v2.3/install-gde/composer.html).
+
