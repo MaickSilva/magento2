@@ -44,7 +44,7 @@ Obs: vou disponibilizar um arquivo no qual você deve criar dentro do diretório
 
 Você irá criar o arquivo chamado ```env.php``` e inserir o código abaixo alterando os parâmetros para os seus
 
-Obs: pode ser que você precise alterar as permissões para criar o arquivo
+Obs: pode ser que você precise alterar as permissões para criar o arquivo, ou entrar como sudo, pois já foi estabelecidos o grupo de usuario.
 
 ```
 <?php
@@ -62,18 +62,18 @@ return [
                 'host' => 'localhost',
                 'dbname' => 'magento',
                 'username' => 'user',
-                'password' => 'magento,
+                'password' => 'magento',
                 'model' => 'mysql4',
                 'engine' => 'innodb',
                 'initStatements' => 'SET NAMES utf8;',
                 'active' => '1'
-            
-        
+            ]
+        ]
     ],
     'resource' => [
         'default_setup' => [
             'connection' => 'default'
-        
+        ]
     ],
     'x-frame-options' => 'SAMEORIGIN',
     'MAGE_MODE' => 'default',
@@ -87,14 +87,14 @@ return [
             ],
             'page_cache' => [
                 'id_prefix' => '4cf_'
-            
-        
+            ]
+        ]
     ],
     'lock' => [
         'provider' => 'db',
         'config' => [
             'prefix' => NULL
-        
+        ]
     ],
     'cache_types' => [
         'config' => 1,
@@ -115,8 +115,9 @@ return [
     ],
     'install' => [
         'date' => 'Sun, 30 Jun 2019 09:13:03 +0000'
-    
+    ]
 ];
+
 
 ```
 
